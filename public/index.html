@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;500&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>TailwindCSS</title>
+
+    <style type="text/tailwindcss">
+        /* #toggle:checked ~ label div.toggle-circle {
+            @apply translate-x-3;
+        } */
+    </style>
+</head>
+
+<body class="dark:bg-slate-600 dark:text-white">
+    <div class="mb-10 flex justify-center">
+        <span class="text-sm text-slate-500 mr-2">Light</span>
+        <input type="checkbox" id="toggle" class="">
+        <label for="toggle">
+            <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                <div class="toggle-circle w-4 h-4 bg-white rounded-full"></div>
+            </div>
+        </label>
+        <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
+
+    <div class="mb-10">
+        <h1 class="text-4xl text-neutral-500 font-inter">Belajar <span class="bg-gradient-to-r from-blue-500 to-teal-200 bg-clip-text text-transparent">TailwindCSS</span>  Spacing</h1>
+        <div class="p-18">Isi</div>
+    </div>
+    <div class="max-w-xl h-96 mx-auto bg-[#bada55] mt-[42px]"></div>
+
+    <script>
+        const checkbox = document.querySelector('#toggle')
+        const html = document.querySelector('html')
+        checkbox.addEventListener('click', function() {
+            checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark')
+        })
+    </script>
+</body>
+
+</html>
